@@ -35,16 +35,16 @@ let weekDays = [
 let finalWeekDay = weekDays[currentWeekDay];
 
 let currentMonthUpdate = document.querySelector("#current-month");
-currentMonthUpdate.innerHTML = `${finalMonth}`;
+currentMonthUpdate.innerHTML = `${finalMonth} `;
 
 let currentDayUpdate = document.querySelector("#current-day");
-currentDayUpdate.innerHTML = `${currentDay}`;
+currentDayUpdate.innerHTML = `${currentDay},`;
 
 let currentYearUpdate = document.querySelector("#current-year");
 currentYearUpdate.innerHTML = `${currentYear}`;
 
 let currentWeekDayUpdate = document.querySelector("#current-week-day");
-currentWeekDayUpdate.innerHTML = `${finalWeekDay}`;
+currentWeekDayUpdate.innerHTML = `${finalWeekDay} `;
 
 let currentHourUpdate = document.querySelector("#current-hour");
 if (currentHour < 10) {
@@ -78,14 +78,14 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="col-2">
+        `<div class="col-4">
       <div class="day">${formatDate(forecastDay.dt)}</div>
-        <div class="col-2 day-icon">
-          <img src="http://openweathermap.org/img/wn/${
+        <div class="day-icon">
+          <img class="icon" id="weather-pic" src="http://openweathermap.org/img/wn/${
             forecastDay.weather[0].icon
-          }@2x.png"/>
+          }@2x.png"/ >
         </div>
-        <div class="col-2 day-temp">
+        <div class="day-temp">
           <span>${Math.round(forecastDay.temp.day)}</span>ºF
         </div>
       </div>`;
@@ -126,7 +126,7 @@ function displayMinMaxTemp(response) {
   let maxTemp = Math.round(response.data.main.temp_max);
   let minTemp = Math.round(response.data.main.temp_min);
   let newMinMaxTempDisplayed = document.querySelector("#min-max-temp");
-  newMinMaxTempDisplayed.innerHTML = `MIN:${minTemp} MAX:${maxTemp}`;
+  newMinMaxTempDisplayed.innerHTML = `<i class="fas fa-thermometer-quarter"></i>:${minTemp}ºF | <i class="fas fa-thermometer-full"></i>:${maxTemp}ºF`;
 }
 //function changes the middle icon to current temp icon
 function displayTempIcon(response) {

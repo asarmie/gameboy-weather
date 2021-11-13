@@ -30,20 +30,19 @@
   <body>
     <div class="container">
       <div class="search-engine-container">
-        <form class="row">
-          <div class="col-10">
+        <form class="row" id="search-form">
+          <div class="col-8 text-box">
             <input
-              type="input"
-              class="form-control"
-              id="search-input"
+              type="text"
+              class="form-control form-control-lg"
+              id="search-engine-input-text"
               placeholder="Search a city"
               autofocus="on"
+              autocomplete="off"
             />
           </div>
-          <div class="col-2">
-            <button type="submit" class="search-button" id="search-button">
-              Search
-            </button>
+          <div class="col-4 button" id="search-button">
+            <input type="submit" class="enter-button" value="Search" />
           </div>
         </form>
       </div>
@@ -51,22 +50,22 @@
       <div class="gameboy">
         <div class="gameboy-screen">
           <div class="search-current-date">
-            <span id="current-month">NOVEMBER</span
+            <span id="current-month">NOVEMBER </span
             ><span id="current-day"> 6, </span
-            ><span id="current-year">2021</span>
+            ><span id="current-year"> 2021</span>
           </div>
           <div class="search-current-weekday-time">
-            <span id="current-week-day">SATURDAY</span
+            <span id="current-week-day">SATURDAY </span
             ><span id="current-hour"> 10</span>:<span id="current-minute"
               >33</span
             >
           </div>
           <div class="search-city">
-            <span id="current-search-city">New York City</span>
+            <span id="display-city">New York City</span>
           </div>
           <div class="row">
             <div class="col-6 search-city-temp">
-              <span id="current-search-city-temp">15 </span>
+              <span id="numerical-temp">15 </span>
               <span class="units">
                 <span id="fahrenheit"><a href id="fahrenheit-link">ºF</a></span
                 >|<span id="celsius"><a href id="celsius-link">ºC</a></span>
@@ -82,12 +81,12 @@
           <div class="current-temp-description" id="temp-description">
             SUNNY
           </div>
-          <div class="search-temp-range" id="current-temp-range">
+          <div class="search-temp-range" id="min-max-temp">
             <i class="fas fa-thermometer-quarter"></i>:30ºF |
             <i class="fas fa-thermometer-full"></i>:60ºF
           </div>
           <div class="search-wind-speed">
-            <i class="fa-solid fa-wind"></i>:<span id="current-wind-speed"
+            <i class="fa-solid fa-wind"></i>:<span id="display-wind-speed"
               >3</span
             >
             MILES/HR
@@ -108,7 +107,7 @@
           <div class="row day-row">
             <div class="col-4">
               <div class="day">MON</div>
-              <div class="col day-icon">
+              <div class="day-icon">
                 <img
                   class="icon"
                   src="http://openweathermap.org/img/wn/10d@2x.png"
