@@ -1,3 +1,6 @@
+//I didnt really like my old weather app style... so i stayed up all night changing it to this one
+//So my github comments are very minimal because i used a lot of my old code in this one.
+
 //Time &  Date Code
 let now = new Date();
 
