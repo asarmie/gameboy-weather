@@ -1,0 +1,117 @@
+.container {
+  display: block;
+  margin: auto;
+  padding: 50px;
+}
+.search-engine-container {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Press Start 2P", cursive;
+}
+.gameboy {
+  display: block;
+  margin: auto;
+  border: 5px solid black;
+  border-radius: 5% 5% 5% 5%;
+  width: 460px;
+  height: 600px;
+  font-family: "Press Start 2P", cursive;
+  background-color: #ffd60a;
+}
+.gameboy-screen {
+  display: block;
+  margin: 30px 20px 10px 50px;
+  border: 2px solid black;
+  border-radius: 3% 3% 3% 3%;
+  width: 78%;
+  height: 280px;
+  padding-top: 10px;
+  background-color: white;
+  color: black;
+}
+.cross {
+  display: block;
+  position: relative;
+  left: 50px;
+  top: -30px;
+  font-size: 80px;
+}
+.a-button {
+  display: block;
+  box-sizing: content-box;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+  left: 60px;
+}
+.b-button {
+  display: block;
+  box-sizing: content-box;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  position: relative;
+  top: 20px;
+  left: 10px;
+}
+.weather-forecast {
+  position: relative;
+  bottom: 40px;
+  font-size: 10px;
+}
+.day-row {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.search-city {
+  text-align: center;
+  font-size: 25px;
+}
+.search-city-temp {
+  display: block;
+  position: relative;
+  top: 25px;
+  left: 60px;
+
+  font-size: 34px;
+}
+.weather-icon {
+  display: block;
+  text-align: center;
+}
+.units {
+  font-size: 11px;
+  position: relative;
+  right: 30px;
+  top: -30px;
+}
+.current-temp-description {
+  font-size: 15px;
+  text-align: center;
+}
+.search-temp-range {
+  font-size: 15px;
+  text-align: center;
+}
+.search-wind-speed {
+  font-size: 15px;
+  text-align: center;
+}
+.search-current-date {
+  font-size: 15px;
+  text-align: center;
+}
+.search-current-weekday-time {
+  font-size: 15px;
+  text-align: center;
+}
+.icon {
+  width: 50px;
+  height: 50px;
+}
